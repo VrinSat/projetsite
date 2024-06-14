@@ -6,14 +6,24 @@ from flask import Flask
 
 app = Flask(__name__)
 
+@app.route('/about/')
+def about():
+    return render_template('about.html')
 
 @app.route('/')
 def hello():
     return render_template('index.html', utc_dt=datetime.datetime.utcnow())
 
-@app.route('/about/')
-def about():
-    return '<h3>This is a Flask web application.</h3>'
+@app.route('/comments/')
+def comments():
+    comments = ['life is a soup and i am a fork ',
+                'wonderfull',
+                'Sona kitna sona hai ',
+                'dayumm man:].'
+                ]
+    return render_template('comments.html', comments=comments)
+
+
 
 @app.route('/capitalize/<word>/')
 def capitalize (word):
