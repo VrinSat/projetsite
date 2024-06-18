@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Comments about life to make it more usefull :){% endblock %}</h1>
+    <div style="width: 50%; margin: auto">
+        {% for comment in comments %}
+        {% if loop.index != 2 %}
+            <div style="padding: 5px;
+                        background-color: #000000;
+                        margin: 50px">
+                <p>#{{ loop.index }}</p>
+                <p style="font-size: 24px;
+                          color:white">{{ comment }}</p>
+            </div>
+            {% endif %}
+        {% endfor %}
+        <hr>
+        <div>
+            {{" <h1>COMMENTS</h1>"|safe }}
+            <p>{{comments | join("<hr>")| safe }}</p>
+        </div>
+    </div>
+{% endblock %}

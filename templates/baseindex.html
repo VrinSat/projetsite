@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %} - FlaskApp</title>
+    <style>
+        body{
+            background-image: url(https://wallpapers.com/images/hd/light-color-background-u5ajon1xr9puabyq.jpg);
+        }
+        nav{
+            background-color: #88EEFF
+        }
+        nav a {
+            color: rgb(34, 229, 255)
+            font-size: 3em;
+            margin-left: 50px;
+            text-decoration::shadow;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        
+        div {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: black;
+        }
+        nav a:hover{
+            color: black;
+            font-size: larger;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('login')}}">Login</a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+</body>
+</html>
