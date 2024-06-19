@@ -9,7 +9,6 @@ app = Flask(__name__)
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 @app.route('/')
 def index():
-    message="Please login"
     return render_template('index.html')
     
 @app.route('/login', methods=['GET', 'POST'])
@@ -65,6 +64,7 @@ def greet_user(user_id):
     except IndexError:
         abort(404)
 
-
+if __name__ == '__main__':
+    app.run()
 
 
