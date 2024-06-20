@@ -1,13 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>{% block title %} hi :D{% endblock %}</h1>
-    <h3>If you are reading this it means that the person who put her 
-        <br> blood sweat and tears has finally made it(that person is so proud of herself )
-        <br>Even if this look simple(and not so pretty) we don't judge.
-        <p>We still don't know what this small "website" is gonna be about, 
-        <br> we are still working on it. Thank you
-        <br>feel free to discover other things on the navigation bar beside the Home, enjoy:)</p>
-    </h3>
+
+    <h1>{% block title %} hey:]{% endblock %}</h1>
+    <h3>Welcome to VrinSat, we offer you handmade crochet items.
+        <br>Check out <a href="{{ url_for('about')}}">VrinSat</a> to know more about us.
+    </h3>  
     <h3>{{ utc_dt }}</h3>
 {% endblock %}
